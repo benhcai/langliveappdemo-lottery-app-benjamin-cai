@@ -9,3 +9,20 @@ Live Demo: https://benjamincai-langlive-lottery-app.netlify.app/
 1. Download files from github
 2. From within the folder, run npm install
 3. Run npm start
+
+### Depository Walkthrough
+
+1. Download files from github
+2. From within the folder, run npm install
+3. Run npm start
+
+### src
+
+Folders in src include:
+
+- index.js: entrypoint for the app. Redux is setup here, wrapping the App in a Provider.
+- App.js: homepage for the application. This file Composes the base components of the app.
+- components: contain the view and model React components used in the app
+- helpers: contains helper functions used for formatting and independent functions
+- redux: supplementary files for Redux setup. Note that the reducers, actions and type files are not included here. This project uses a features based Redux architecture where the redux files are found in a state folder alongside each component.
+- resources: contains the images
