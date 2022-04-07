@@ -71,7 +71,10 @@ const Stopwatch = () => {
         </p>
       </div>
       <div className="stopwatch--buttons">
-        <button className="stopwatch--start" onClick={handleStart}>
+        <button
+          className={`stopwatch--start ${started === true ? "started" : ""}`}
+          onClick={handleStart}
+        >
           Start
         </button>
         <button className="stopwatch--stop" onClick={handleStop}>

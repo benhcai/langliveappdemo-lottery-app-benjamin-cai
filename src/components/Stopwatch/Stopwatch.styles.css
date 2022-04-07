@@ -43,3 +43,8 @@ button {
   min-width: 50px;
   max-width: 100px;
 }
+
+.started {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
