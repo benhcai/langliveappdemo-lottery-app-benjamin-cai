@@ -33,7 +33,9 @@ const TimerInput = () => {
 
   return (
     <div className="TimerInput">
-      <p className="instruction-text">Step 1: Choose hours, minutes, and time till lottery draw.</p>
+      <p className="instruction-text">
+        Step 1: Choose hours, minutes, and seconds till lottery draw.
+      </p>
       <form className="timer-form">
         <label>Hours</label>
         <input
