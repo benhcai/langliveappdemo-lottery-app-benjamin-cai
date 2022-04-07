@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Stopwatch from "./components/Stopwatch/Stopwatch.component";
+import TimerInput from "./components/TimerInput/TimerInput.component";
+import Picker from "./components/Picker/Picker.component";
+import Users from "./components/Users/Users.component";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">
+        <h1>浪Live Lottery App Demo</h1>
+        <p>Benjamin Cai</p>
+      </div>
+      <TimerInput />
+      <Stopwatch />
+      <Users />
+      <Picker />
     </div>
   );
 }

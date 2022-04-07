@@ -1,0 +1,45 @@
+.Stopwatch {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "stopwatch--title stopwatch--title"
+    "stopwatch--count stopwatch--count"
+    "stopwatch--buttons stopwatch--buttons";
+  justify-items: center;
+  gap: 0.3rem;
+}
+
+.stopwatch--title {
+  grid-area: stopwatch--title;
+  justify-self: start;
+}
+
+.stopwatch--buttons {
+  grid-area: stopwatch--buttons;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stopwatch--start {
+  grid-area: stopwatch--start;
+}
+
+.stopwatch--stop {
+  grid-area: stopwatch--stop;
+}
+
+.stopwatch--count {
+  grid-area: stopwatch--count;
+  font-size: 2rem;
+}
+
+.stopwatch--active {
+  color: green;
+}
+
+button {
+  cursor: pointer;
+  min-width: 50px;
+  max-width: 100px;
+}
