@@ -66,8 +66,8 @@ const Stopwatch = () => {
     <div className="Stopwatch">
       <div className="stopwatch--title">
         <p className="instruction-text">
-          Step 2: Press Start to begin countdown. Pressing Reset will stop and reset the countdown
-          and no winner to be drawn.
+          Step 2: Press Start to begin countdown. Pressing Reset will interrupt, stop and reset the
+          countdown and no winner to be drawn.
         </p>
       </div>
       <div className="stopwatch--buttons">
