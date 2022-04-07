@@ -2,7 +2,8 @@
 }
 
 .users-list-container {
-  max-height: 30%;
+  min-height: 10vh;
+  max-height: 35vh;
   overflow-x: scroll;
   overflow-y: none;
   border: 1px solid rgb(201, 201, 201);
