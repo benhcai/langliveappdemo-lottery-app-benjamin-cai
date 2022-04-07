@@ -25,7 +25,7 @@
   grid-area: stopwatch--start;
 }
 
-.stopwatch--stop {
+.stopwatch--reset {
   grid-area: stopwatch--stop;
 }
 
@@ -44,7 +44,11 @@ button {
   max-width: 100px;
 }
 
-.started {
+.stopwatch--start--active {
   opacity: 0.5;
-  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.stopwatch--reset--active {
+  border: 1px solid rgb(21, 11, 0);
 }
