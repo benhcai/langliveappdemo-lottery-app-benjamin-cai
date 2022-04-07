@@ -2,7 +2,7 @@
 
 Author: Benjamin Cai 蔡子豪
 
-Live Demo:
+Live Demo: https://benjamincai-langlive-lottery-app.netlify.app/
 
 ### How to download and run application:
 
