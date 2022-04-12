@@ -32,3 +32,15 @@ Components include:
 - Users: handles generation and render of users
 - Picker: handles choosing random winner
 - UserCard: handles presentation of winning user
+
+#### Code review to-do:
+
+- [x] Handle negative time values. Force positive value.
+- [x] Handle edge cases in twoDigits function.
+- [x] Clean up `TimerInput's` with event listeners helpers.
+- [x] Clear timeout on `Stopwatch` unmount.
+- [x] Setup `Stopwatch` timeInMs in useEffect for performance optimization.
+- [x] Disable start when timer is 0. Inject JSX error.
+- [x] Handle edge cases for date picker, MAX_DAYS = 100,000,000.
+- [x] Create custom stopwatch clock to allow for manual countdown handling.
+- [x] Apply limit to Stopwatch equal to the maximum value of setTimeout, a 32-bit signed integer.

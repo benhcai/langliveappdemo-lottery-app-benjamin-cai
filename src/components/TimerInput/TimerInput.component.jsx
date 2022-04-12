@@ -3,34 +3,34 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateHours, updateMins, updateSecs } from "./state/timerInput.actions";
 import { twoDigits } from "../../helpers/formatTimerInputNums";
+import { onFocusHandler, onBlurHandler } from "../../helpers/timerEventHandlers.js";
 
 const TimerInput = () => {
   const dispatch = useDispatch();
-  const [hours, setHours] = useState(twoDigits(0));
-  const [mins, setMins] = useState(twoDigits(0));
-  const [secs, setSecs] = useState(twoDigits(0));
+  const [hours, setHours] = useState(twoDigits("00"));
+  const [mins, setMins] = useState(twoDigits("00"));
+  const [secs, setSecs] = useState("00");
 
   const handleHoursChange = (e) => {
-    const val = Number(e.target.value);
-    setHours(twoDigits(val));
-    dispatch(updateHours(val));
+    const formattedVal = twoDigits(e.target.value);
+    setHours(formattedVal);
+    dispatch(updateHours(formattedVal));
   };
 
   const handleMinsChange = (e) => {
-    const val = Number(e.target.value);
-    setMins(twoDigits(val));
-    dispatch(updateMins(val));
+    const formattedVal = twoDigits(e.target.value);
+    setMins(formattedVal);
+    dispatch(updateMins(formattedVal));
   };
 
   const handleSecsChange = (e) => {
-    const val = Number(e.target.value);
-    setSecs(twoDigits(val));
-    dispatch(updateSecs(val));
+    const formattedVal = twoDigits(e.target.value);
+    setSecs(formattedVal);
+    dispatch(updateSecs(formattedVal));
   };
 
   const minHoursMinsSecs = 0;
   const maxMinsSecs = 60;
-
   return (
     <div className="TimerInput">
       <p className="instruction-text">
@@ -45,6 +45,8 @@ const TimerInput = () => {
           onChange={handleHoursChange}
           min={minHoursMinsSecs}
           step="1"
+          onFocus={() => onFocusHandler(hours, setHours)}
+          onBlur={() => onBlurHandler(hours, setHours)}
         />
         <label>Minutes</label>
         <input
@@ -53,8 +55,10 @@ const TimerInput = () => {
           value={mins}
           onChange={handleMinsChange}
           min={minHoursMinsSecs}
-          max={maxMinsSecs}
+          // max={maxMinsSecs}
           step="1"
+          onFocus={() => onFocusHandler(mins, setMins)}
+          onBlur={() => onBlurHandler(mins, setMins)}
         />
         <label>Seconds</label>
         <input
@@ -63,8 +67,10 @@ const TimerInput = () => {
           value={secs}
           onChange={handleSecsChange}
           min={minHoursMinsSecs}
-          max={maxMinsSecs}
+          // max={maxMinsSecs}
           step="1"
+          onFocus={() => onFocusHandler(secs, setSecs)}
+          onBlur={() => onBlurHandler(secs, setSecs)}
         />
       </form>
     </div>

@@ -1,0 +1,11 @@
+.StopwatchClock {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr 10px 1fr;
+  justify-items: center;
+  min-width: 195px;
+}
+
+.StopwatchClock--divider {
+  display: flex;
+  width: 10px;
+}

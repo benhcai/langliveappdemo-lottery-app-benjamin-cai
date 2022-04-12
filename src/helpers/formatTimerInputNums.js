@@ -1,6 +1,6 @@
 export const twoDigits = (num) => {
-  return num.toLocaleString("en-US", {
-    minimumIntegerDigits: 2,
-    useGrouping: false,
-  });
+  num = parseInt(num);
+  if (isNaN(num)) return "";
+  if (num < 10) return String(`0${num}`);
+  return String(num);
 };

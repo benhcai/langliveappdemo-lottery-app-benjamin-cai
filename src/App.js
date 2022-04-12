@@ -12,7 +12,7 @@ function App() {
         <p>Benjamin Cai</p>
       </div>
       <TimerInput />
-      <Stopwatch />
+      {<Stopwatch />}
       <Users />
       <Picker />
     </div>

@@ -52,3 +52,8 @@ button {
 .stopwatch--reset--active {
   border: 1px solid rgb(21, 11, 0);
 }
+
+.time-error {
+  grid-column: span 2;
+  color: rgb(220, 4, 4);
+}
