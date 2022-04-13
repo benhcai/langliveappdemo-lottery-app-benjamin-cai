@@ -57,14 +57,9 @@ const Stopwatch = () => {
   const [isTimerError, setIsTimerError] = useState(false);
 
   const handleStart = () => {
-    if (timeoutTime === 0) {
-      setIsTimerError(true);
-      setErrorMessage("Countdown time cannot be 0. Please select a time for the countdown");
-      return;
-    }
     if (!checkValidTimeout(timeoutTime)) {
       setIsTimerError(true);
-      setErrorMessage("Countdown time is too long. Valid times range up to 2147483 seconds");
+      setErrorMessage("Countdown time is too long. Valid times range up to 596 hours");
       return;
     }
     setIsTimerError(false);
@@ -104,7 +99,9 @@ const Stopwatch = () => {
       </div>
       <div className="stopwatch--buttons">
         <button
-          className={`stopwatch--start ${started === true ? "stopwatch--start--active" : ""}`}
+          className={`stopwatch--start ${
+            started === true || timeoutTime === 0 ? "stopwatch--start--disabled" : ""
+          }`}
           onClick={handleStart}
         >
           Start

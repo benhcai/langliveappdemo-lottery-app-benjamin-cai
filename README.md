@@ -42,5 +42,5 @@ Components include:
 - [x] Setup `Stopwatch` timeInMs in useEffect for performance optimization.
 - [x] Disable start when timer is 0. Inject JSX error.
 - [x] ~~Handle edge cases for date picker, MAX_DAYS = 100,000,000.~~
-- [x] Create custom stopwatch clock to allow for manual countdown handling.
+- [x] Create custom stopwatch clock to facilitate manual countdown handling.
 - [x] Apply limit to Stopwatch equal to the maximum value of setTimeout, a 32-bit signed integer.

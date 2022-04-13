@@ -44,7 +44,7 @@ button {
   max-width: 100px;
 }
 
-.stopwatch--start--active {
+.stopwatch--start--disabled {
   opacity: 0.5;
   pointer-events: none;
 }
